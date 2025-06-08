@@ -16,5 +16,17 @@
     "Make a quesadilla with 2 tortillas and half the cheese. Cook until golden brown on both sides.",
     "Fry the eggs sunny-side up.",
     "Assemble: Place quesadilla on a plate, top with refried beans, zucchini, eggs, salsa, and avocado slices."
-  ]
+  ],
+  "image": {
+    "src": "helen-dinner.svg"
+  },
+  "icon": {
+    "src": "hotsauce.svg"
+  },
+  "servings": 2,
+  "styles": {
+    "bgColor": "bg-indigo-300",
+    "textColor": "text-indigo-600",
+    "textColorHover": "text-indigo-800"
+  }
 }

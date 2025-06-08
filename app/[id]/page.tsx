@@ -2,6 +2,7 @@ import Image from "next/image";
 
 import { load } from "@/db/recipe";
 import { cn } from "@/lib/cn";
+import { formatTime } from "@/lib/formatTime";
 import Header from "@/components/header";
 import type { Metadata } from "next";
 
@@ -54,6 +55,14 @@ export default async function Recipe({
   params: Promise<RecipeParams>;
 }) {
   const recipe = await getRecipe(params);
+  const { cookTime, prepTime, totalTime, servings } = recipe;
+
+  const details = [
+    servings ? `Servings: ${servings}` : undefined,
+    prepTime ? `Prep time: ${formatTime(prepTime)}` : undefined,
+    cookTime ? `Cook time: ${formatTime(cookTime)}` : undefined,
+    totalTime ? `Total time: ${formatTime(totalTime)}` : undefined,
+  ].filter(Boolean);
 
   return (
     <body
@@ -65,40 +74,43 @@ export default async function Recipe({
     >
       <Header
         className={
-          recipe.styles?.textColorHover
-            ? `hover:${recipe.styles?.textColorHover}`
-            : undefined
+          recipe.styles?.textColorHover &&
+          `hover:${recipe.styles?.textColorHover}`
         }
       />
 
-      <div className="flex flex-col items-center justify-center pt-50 pb-50">
+      <div className="flex flex-col items-center justify-center pt-10 md:pt-50 pb-50">
         <div className="relative">
           {recipe.image && (
             <Image
-              src={`/${recipe.image}`}
+              src={`/${recipe.image.src}`}
               width={300}
               height={500}
               alt="Hearts"
-              className="absolute left-0 top-0 -translate-x-12/12 -translate-y-5/12"
+              className={cn(
+                "mx-auto mb-10 static h-40 md:h-auto md:mb-0 md:absolute md:left-0 md:top-0 md:-translate-x-12/12 md:-translate-y-5/12",
+                recipe.image.className
+              )}
             />
           )}
 
-          <h2 className="inline relative text-8xl font-title">
-            {recipe.title}{" "}
+          <h2 className="inline relative text-6xl md:text-8xl font-title">
+            {recipe.title}
             {recipe.icon && (
               <Image
-                src={`/${recipe.icon}`}
-                width={170}
-                height={140}
+                src={`/${recipe.icon.src}`}
+                height={100}
+                width={100}
                 alt="icon"
-                className="absolute right-0 top-0 translate-x-11/12 -translate-y-7/12"
+                className="absolute right-0 top-0 translate-x-11/12 -translate-y-7/12 hidden md:block"
               />
             )}
           </h2>
         </div>
 
         <div className="max-w-xl">
-          <ul className="text-xl flex flex-wrap mb-4">
+          <div className="pb-4">{details.join(" - ")}</div>
+          <ul className="text-xl flex flex-wrap mb-8">
             {recipe.ingredients?.map((ingredient, index) => (
               <li key={index} className="flex-none basis-[288px]">
                 {ingredient}

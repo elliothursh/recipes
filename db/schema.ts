@@ -1,15 +1,21 @@
 export type Recipe = {
   paramsId: string;
   title: string;
-  description: string;
-  image?: string;
-  icon?: string;
   ingredients?: string[];
+  description: string;
   instructions?: string[];
-  prepTime?: string;
-  cookTime?: string;
-  totalTime?: string;
-  servings?: string;
+  image?: {
+    src: string;
+    className?: string;
+  };
+  icon?: {
+    src: string;
+    className?: string;
+  };
+  prepTime?: number;
+  cookTime?: number;
+  totalTime?: number;
+  servings?: number;
   styles?: {
     bgColor?: string;
     textColor?: string;
