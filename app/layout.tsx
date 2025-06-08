@@ -12,15 +12,5 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en">
-      <body>
-        <header className="flex flex-col p-4 sticky top-0">
-          <h1 className="text-4xl self-center">Recipes</h1>
-        </header>
-
-        {children}
-      </body>
-    </html>
-  );
+  return <html lang="en">{children}</html>;
 }

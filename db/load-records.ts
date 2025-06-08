@@ -6,20 +6,20 @@ function memoize(fn: typeof loadRecords) {
   const cache: Record<string, any[]> = {};
 
   return async function <T>(record: string) {
-    const key = JSON.stringify(record); // Create a unique key based on arguments
+    const key = JSON.stringify(record);
     if (cache[key]) {
-      return cache[key]; // Return cached result if available
+      return cache[key];
     }
-    const result = await fn<T>(record); // Call the original function
-    cache[key] = result; // Store the result in cache
+    const result = await fn<T>(record);
+    cache[key] = result;
     return result;
   };
 }
 
 async function loadRecords<T>(record: string) {
-  console.log(`Loading records from: ${record}`);
   const __dirname = path.dirname(fileURLToPath(import.meta.url));
   const recordDir = path.join(__dirname, record);
+  console.log(`Loading records from: ${recordDir}`);
   const files = fs.readdirSync(recordDir);
   // Filter only JSON files
   const jsonFiles = files.filter((file) => file.endsWith(".json"));

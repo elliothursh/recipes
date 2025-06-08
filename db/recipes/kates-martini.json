@@ -1,9 +1,14 @@
 {
   "title": "Kate's Martini",
-  "ingredients": ["2 ounces gin", "Ice cubes", "Olives for garnish"],
-  "instructions": ["Mix it all together in a shaker with ice."],
-  "styling": {
-    "bgColor": "#f8e5d7",
-    "textColor": "#5a2d0c"
+  "ingredients": ["6 ounces gin", "Ice cubes", "Olives for garnish"],
+  "description": "A classic martini, perfect for celebrating with friends or enjoying a quiet evening.",
+  "instructions": ["Mix it all together in a shaker with ice. To Kate!"],
+  "servings": 2,
+  "image": "martini.svg",
+  "icon": "olives.svg",
+  "styles": {
+    "bgColor": "bg-emerald-900",
+    "textColor": "text-lime-300",
+    "textColorHover": "text-lime-500"
   }
 }
