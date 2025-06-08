@@ -2,23 +2,23 @@ export async function generateStaticParams() {
   return [{ id: "1", hello: "ar" }, { id: "2" }];
 }
 
-interface RecipeParams {
+type RecipeParams = {
   id: string;
-  [key: string]: any;
-}
+};
 
-interface RecipeProps {
-  params: RecipeParams;
-}
-
-async function getRecipe(params: RecipeParams) {
+async function getRecipe(params: Promise<RecipeParams>) {
+  const recipe = await params;
   return {
-    id: params.id,
-    title: `Post ${params.id}`,
+    id: recipe.id,
+    title: `Post ${recipe.id}`,
   };
 }
 
-export default async function Recipe({ params }: RecipeProps) {
+export default async function Recipe({
+  params,
+}: {
+  params: Promise<RecipeParams>;
+}) {
   const post = await getRecipe(params);
 
   return <div className="text-green-600">{post.title}</div>;
