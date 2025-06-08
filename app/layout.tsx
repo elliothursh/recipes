@@ -14,7 +14,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <header className="flex flex-col p-4 sticky top-0">
+          <h1 className="text-4xl self-center">Recipes</h1>
+        </header>
+
+        {children}
+      </body>
     </html>
   );
 }

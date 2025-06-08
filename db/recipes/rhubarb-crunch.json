@@ -1,0 +1,27 @@
+{
+  "title": "Rhubarb Crunch",
+  "ingredients": [
+    "4 cups rhubarb, chopped",
+    "1 cup granulated sugar",
+    "1/2 cup all-purpose flour",
+    "1/2 teaspoon cinnamon",
+    "1/4 teaspoon salt",
+    "1 cup rolled oats",
+    "1/2 cup brown sugar, packed",
+    "1/2 cup butter, melted"
+  ],
+  "instructions": [
+    "Preheat the oven to 350°F (175°C).",
+    "In a large bowl, combine the chopped rhubarb and granulated sugar. Mix well and let it sit for about 10 minutes.",
+    "In another bowl, mix together the flour, cinnamon, and salt.",
+    "Add the rolled oats and brown sugar to the flour mixture, then pour in the melted butter. Stir until crumbly.",
+    "Spread the rhubarb mixture evenly in a greased baking dish.",
+    "Sprinkle the oat mixture over the rhubarb.",
+    "Bake in the preheated oven for 30-35 minutes or until the topping is golden brown and the rhubarb is tender.",
+    "Let it cool slightly before serving."
+  ],
+  "styling": {
+    "bgColor": "bg-emerald-900",
+    "textColor": "text-lime-300"
+  }
+}

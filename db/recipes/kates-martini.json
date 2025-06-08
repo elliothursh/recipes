@@ -1,0 +1,9 @@
+{
+  "title": "Kate's Martini",
+  "ingredients": ["2 ounces gin", "Ice cubes", "Olives for garnish"],
+  "instructions": ["Mix it all together in a shaker with ice."],
+  "styling": {
+    "bgColor": "#f8e5d7",
+    "textColor": "#5a2d0c"
+  }
+}
