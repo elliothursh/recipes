@@ -20,10 +20,12 @@ export async function generateMetadata({
   }
   return {
     title: recipeData.title,
-    description: recipeData.description ?? "A delicious recipe",
+    description:
+      recipeData.description ?? "A delicious recipe by Helen & Elliot",
     openGraph: {
       title: recipeData.title,
-      description: recipeData.description ?? "A delicious recipe",
+      description:
+        recipeData.description ?? "A delicious recipe by Helen & Elliot",
     },
   };
 }
