@@ -38,11 +38,7 @@
   ],
   "image": {
     "src": "cinnamon-rolls.svg",
-    "className": "rotate-20"
-  },
-  "icon": {
-    "src": "cinnamon-rolls.svg",
-    "className": "-rotate-25"
+    "className": "right-[36%] -top-30 w-60"
   },
   "servings": 12,
   "cookTime": 25,

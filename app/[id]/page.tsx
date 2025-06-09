@@ -189,20 +189,21 @@ export default async function Recipe({
             />
           )}
 
-          <h2 className="inline relative text-6xl md:text-8xl font-title">
+          {recipe.icon && (
+            <Image
+              src={`/${recipe.icon.src}`}
+              height={100}
+              width={100}
+              alt="icon"
+              className={cn(
+                "hidden md:block absolute left-full top-0 -translate-y-7/12",
+                recipe.icon.className
+              )}
+            />
+          )}
+
+          <h2 className="relative text-6xl md:text-8xl font-title text-center">
             {recipe.title}
-            {recipe.icon && (
-              <Image
-                src={`/${recipe.icon.src}`}
-                height={100}
-                width={100}
-                alt="icon"
-                className={cn(
-                  "hidden md:block absolute left-full top-0 -translate-y-7/12",
-                  recipe.icon.className
-                )}
-              />
-            )}
           </h2>
         </div>
 
