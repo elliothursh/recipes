@@ -1,5 +1,6 @@
 import Image from "next/image";
 
+import type { Recipe } from "@/db/schema";
 import { load } from "@/db/recipe";
 import { cn } from "@/lib/cn";
 import { formatTime } from "@/lib/formatTime";
@@ -49,39 +50,37 @@ async function getRecipe(params: Promise<RecipeParams>) {
   return recipeData;
 }
 
-function Ingredients({
-  ingredients,
-}: {
-  ingredients?: string[] | Record<string, string[]>;
-}) {
+function ColumnList({ items }: { items?: string[] }) {
+  return (
+    <ul className="text-xl flex flex-wrap mb-4">
+      {items?.map((item, index) => (
+        <li key={index} className="flex-none basis-[288px]">
+          {item}
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+function Ingredients({ ingredients }: { ingredients?: Recipe["ingredients"] }) {
   if (!ingredients) return null;
 
   if (Array.isArray(ingredients)) {
     return (
       <>
-        <ul className="text-xl flex flex-wrap mb-8">
-          {ingredients?.map((ingredient, index) => (
-            <li key={index} className="flex-none basis-[288px]">
-              {ingredient}
-            </li>
-          ))}
-        </ul>
+        <div className="font-bold text-2xl mb-2">Ingredients</div>
+        <ColumnList items={ingredients} />
       </>
     );
   } else if (typeof ingredients === "object") {
     return (
       <>
-        {Object.entries(ingredients).map(([key, value]) => {
+        <div className="font-bold text-2xl mb-2">Ingredients</div>
+        {Object.entries(ingredients).map(([title, ingredients]) => {
           return (
-            <div key={key}>
-              <strong>{key}</strong>
-              <ul className="text-xl flex flex-wrap mb-4">
-                {value?.map((ingredient, index) => (
-                  <li key={index} className="flex-none basis-[288px]">
-                    {ingredient}
-                  </li>
-                ))}
-              </ul>
+            <div key={title}>
+              <div className="font-bold text-xl">{title}</div>
+              <ColumnList items={ingredients} />
             </div>
           );
         })}
@@ -90,19 +89,63 @@ function Ingredients({
   }
 }
 
+function InstructionsStep({
+  item,
+}: {
+  item?: string | Record<string, string | string[]>;
+}) {
+  if (!item) return null;
+  if (typeof item === "string") {
+    return <p className="text-xl max-w-xl mt-2">{item}</p>;
+  } else {
+    return (
+      <>
+        {Object.entries(item).map(([title, instruction]) => {
+          return (
+            <div key={title} className="mt-2">
+              <div className="font-bold text-xl">{title}</div>
+              <p className="text-xl max-w-xl">{instruction}</p>
+            </div>
+          );
+        })}
+      </>
+    );
+  }
+}
+
+function Instructions({
+  instructions,
+}: {
+  instructions?: Recipe["instructions"];
+}) {
+  return (
+    <>
+      <div className="font-bold text-2xl mb-2">Directions</div>
+      {Array.isArray(instructions) ? (
+        instructions.map((item, index) => (
+          <InstructionsStep key={index} item={item} />
+        ))
+      ) : (
+        <InstructionsStep item={instructions} />
+      )}
+    </>
+  );
+}
+
 export default async function Recipe({
   params,
 }: {
   params: Promise<RecipeParams>;
 }) {
   const recipe = await getRecipe(params);
-  const { cookTime, prepTime, totalTime, servings } = recipe;
+  const { cookTime, prepTime, totalTime, servings, ovenTemp } = recipe;
 
   const details = [
     servings ? `Servings: ${servings}` : undefined,
     prepTime ? `Prep time: ${formatTime(prepTime)}` : undefined,
     cookTime ? `Cook time: ${formatTime(cookTime)}` : undefined,
     totalTime ? `Total time: ${formatTime(totalTime)}` : undefined,
+    ovenTemp ? `Oven temp: ${ovenTemp}°F` : undefined,
   ].filter(Boolean);
 
   return (
@@ -162,15 +205,11 @@ export default async function Recipe({
         </div>
 
         <div className="max-w-xl">
-          <div className="pb-4">{details.join(" · ")}</div>
+          <div className="text-xl pb-4">{details.join(" · ")}</div>
 
           <Ingredients ingredients={recipe.ingredients} />
 
-          {recipe.instructions?.map((instruction, index) => (
-            <p key={index} className="text-xl max-w-xl mt-2">
-              {instruction}
-            </p>
-          ))}
+          <Instructions instructions={recipe.instructions} />
         </div>
       </div>
 

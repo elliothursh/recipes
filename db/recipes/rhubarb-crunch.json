@@ -28,6 +28,7 @@
   "servings": 8,
   "prepTime": 20,
   "cookTime": 60,
+  "ovenTemp": 350,
   "image": {
     "src": "rhubarb.svg"
   },

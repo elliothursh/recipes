@@ -24,12 +24,17 @@
   },
   "description": "Ooey gooey delicious cinnamon rolls",
   "instructions": [
-    "To make the dough",
-    "Melt butter and buttermilk together in microwave, set aside. Dissolve yeast in warm water, set aside. In a large bowl mix together 2 ¼ cups flour, (IMPORTANT: Do not add extra cup of flour at this point) white sugar, and salt until well combined. Add egg, buttermilk/butter mixture, and yeast mixture to the flour and mix well. Add remaining cup flour ¼ cup at a time, adjusting moisture levels until the dough is very tacky, but not sticky. Knead dough for 5 minutes by hand or for 2 minutes on medium speed in a standard mixer. Let the dough rest for a minimum of 10 minutes or refrigerate over night.",
-    "To make the cinnamon filling",
-    "Combine softened butter with brown sugar and cinnamon until the mixture resembles wet sand. Do not over-mix into a paste.",
-    "On baking day",
-    "If dough was refrigerated over night, remove it from the fridge 30 minutes before baking. Preheat the oven to 375 degrees F Roll out the dough into a 13x10 inch rectangle, and apply filling. Roll the dough up, from bottom to top, keeping the roll tight, and tucking filling underneath. Once you have a log of dough, cut it into 12 equal slices, and place in either 2 greased metal cake pans, one 9x13-inch baking dish, or greased muffin tins. Let dough rise somewhere warm for about 45 minutes, or until they have doubled in size. Bake in oven for about 25 minutes or until a deep golden brown."
+    {
+      "To make the dough": [
+        "Melt butter and buttermilk together in microwave, set aside. Dissolve yeast in warm water, set aside. In a large bowl mix together 2 ¼ cups flour, (IMPORTANT: Do not add extra cup of flour at this point) white sugar, and salt until well combined. Add egg, buttermilk/butter mixture, and yeast mixture to the flour and mix well. Add remaining cup flour ¼ cup at a time, adjusting moisture levels until the dough is very tacky, but not sticky. Knead dough for 5 minutes by hand or for 2 minutes on medium speed in a standard mixer. Let the dough rest for a minimum of 10 minutes or refrigerate over night."
+      ]
+    },
+    {
+      "To make the cinnamon filling": "Combine softened butter with brown sugar and cinnamon until the mixture resembles wet sand. Do not over-mix into a paste."
+    },
+    {
+      "On baking day": "If dough was refrigerated over night, remove it from the fridge 30 minutes before baking. Preheat the oven to 375 degrees F Roll out the dough into a 13x10 inch rectangle, and apply filling. Roll the dough up, from bottom to top, keeping the roll tight, and tucking filling underneath. Once you have a log of dough, cut it into 12 equal slices, and place in either 2 greased metal cake pans, one 9x13-inch baking dish, or greased muffin tins. Let dough rise somewhere warm for about 45 minutes, or until they have doubled in size. Bake in oven for about 25 minutes or until a deep golden brown."
+    }
   ],
   "image": {
     "src": "cinnamon-rolls.svg",

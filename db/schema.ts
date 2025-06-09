@@ -3,7 +3,9 @@ export type Recipe = {
   title: string;
   ingredients?: string[] | Record<string, string[]>;
   description: string;
-  instructions?: string[];
+  instructions?:
+    | (string | Record<string, string | string[]>)[]
+    | Record<string, string | string[]>;
   image?: {
     src: string;
     className?: string;
@@ -16,6 +18,7 @@ export type Recipe = {
   cookTime?: number;
   totalTime?: number;
   servings?: number;
+  ovenTemp?: number;
   styles?: {
     bgColor?: string;
     textColor?: string;
