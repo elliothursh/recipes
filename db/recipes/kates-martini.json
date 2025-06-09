@@ -9,7 +9,8 @@
   "instructions": ["Mix it all together in a shaker with ice.", "To Kate!"],
   "servings": 2,
   "image": {
-    "src": "martini.svg"
+    "src": "martini.svg",
+    "className": "rotate-10 translate-x-14"
   },
   "icon": {
     "src": "olives.svg"

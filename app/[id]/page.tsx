@@ -49,6 +49,47 @@ async function getRecipe(params: Promise<RecipeParams>) {
   return recipeData;
 }
 
+function Ingredients({
+  ingredients,
+}: {
+  ingredients?: string[] | Record<string, string[]>;
+}) {
+  if (!ingredients) return null;
+
+  if (Array.isArray(ingredients)) {
+    return (
+      <>
+        <ul className="text-xl flex flex-wrap mb-8">
+          {ingredients?.map((ingredient, index) => (
+            <li key={index} className="flex-none basis-[288px]">
+              {ingredient}
+            </li>
+          ))}
+        </ul>
+      </>
+    );
+  } else if (typeof ingredients === "object") {
+    return (
+      <>
+        {Object.entries(ingredients).map(([key, value]) => {
+          return (
+            <div key={key}>
+              <strong>{key}</strong>
+              <ul className="text-xl flex flex-wrap mb-4">
+                {value?.map((ingredient, index) => (
+                  <li key={index} className="flex-none basis-[288px]">
+                    {ingredient}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          );
+        })}
+      </>
+    );
+  }
+}
+
 export default async function Recipe({
   params,
 }: {
@@ -67,7 +108,7 @@ export default async function Recipe({
   return (
     <body
       className={cn(
-        "min-h-screen max-w-screen overflow-x-hidden bg-emerald-200 text-lime-600 px-4",
+        "min-h-screen flex flex-col justify-between max-w-screen overflow-x-hidden bg-emerald-200 text-lime-600 px-4",
         recipe.styles?.bgColor,
         recipe.styles?.textColor
       )}
@@ -78,19 +119,28 @@ export default async function Recipe({
           `hover:${recipe.styles?.textColorHover}`
         }
       />
-
       <div className="flex flex-col items-center justify-center pt-10 md:pt-50 pb-50">
         <div className="relative">
           {recipe.image && (
             <Image
               src={`/${recipe.image.src}`}
               width={300}
-              height={500}
-              alt="Hearts"
+              height={300}
+              alt={recipe.image.src}
               className={cn(
-                "mx-auto mb-10 static h-40 md:h-auto md:mb-0 md:absolute md:left-0 md:top-0 md:-translate-x-12/12 md:-translate-y-5/12",
+                "hidden md:block absolute right-full top-0 -translate-y-5/12",
                 recipe.image.className
               )}
+            />
+          )}
+
+          {recipe.image && (
+            <Image
+              src={`/${recipe.image.src}`}
+              width={150}
+              height={250}
+              alt={recipe.image.src}
+              className={"md:hidden mx-auto mb-10"}
             />
           )}
 
@@ -102,21 +152,20 @@ export default async function Recipe({
                 height={100}
                 width={100}
                 alt="icon"
-                className="absolute right-0 top-0 translate-x-11/12 -translate-y-7/12 hidden md:block"
+                className={cn(
+                  "hidden md:block absolute left-full top-0 -translate-y-7/12",
+                  recipe.icon.className
+                )}
               />
             )}
           </h2>
         </div>
 
         <div className="max-w-xl">
-          <div className="pb-4">{details.join(" - ")}</div>
-          <ul className="text-xl flex flex-wrap mb-8">
-            {recipe.ingredients?.map((ingredient, index) => (
-              <li key={index} className="flex-none basis-[288px]">
-                {ingredient}
-              </li>
-            ))}
-          </ul>
+          <div className="pb-4">{details.join(" · ")}</div>
+
+          <Ingredients ingredients={recipe.ingredients} />
+
           {recipe.instructions?.map((instruction, index) => (
             <p key={index} className="text-xl max-w-xl mt-2">
               {instruction}

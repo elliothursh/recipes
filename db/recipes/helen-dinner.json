@@ -4,10 +4,10 @@
     "4 small tortillas",
     "3 ounces shredded cheddar",
     "1 zucchini",
-    "1 can refried beans",
+    "1/2 can refried beans",
     "4 eggs",
-    "1 tablespoon butter",
-    "3 tablespoons salsa",
+    "1 tbsp butter",
+    "3 tbsp salsa",
     "1 avocado"
   ],
   "description": "A quick and satisfying dinner featuring cheesy quesadillas, sautéed zucchini, and sunny-side up eggs, topped with salsa and avocado.",
@@ -18,10 +18,12 @@
     "Assemble: Place quesadilla on a plate, top with refried beans, zucchini, eggs, salsa, and avocado slices."
   ],
   "image": {
-    "src": "helen-dinner.svg"
+    "src": "helen-dinner.svg",
+    "className": "rotate-20"
   },
   "icon": {
-    "src": "hotsauce.svg"
+    "src": "hotsauce.svg",
+    "className": "-rotate-15 -translate-y-7/12 h-50"
   },
   "servings": 2,
   "styles": {

@@ -1,7 +1,7 @@
 export type Recipe = {
   paramsId: string;
   title: string;
-  ingredients?: string[];
+  ingredients?: string[] | Record<string, string[]>;
   description: string;
   instructions?: string[];
   image?: {

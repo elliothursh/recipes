@@ -9,7 +9,7 @@ export default async function Home() {
       <Header className={"hover:text-lime-500"} />
 
       <main className="flex flex-col items-center justify-center">
-        <ul>
+        <ul className="text-center">
           {recipes.map((recipe) => (
             <li key={recipe.paramsId}>
               <a

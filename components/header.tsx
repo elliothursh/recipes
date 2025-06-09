@@ -2,8 +2,8 @@ import { cn } from "@/lib/cn";
 
 export default function Header({ className }: { className?: string }) {
   return (
-    <header className="h-18 flex flex-col p-4 font-title">
-      <h1 className="text-4xl self-center">
+    <header className="flex flex-col p-4 font-title">
+      <h1 className="text-5xl self-center">
         <a
           href="/"
           className={cn("hover:text-white transition duration-300", className)}

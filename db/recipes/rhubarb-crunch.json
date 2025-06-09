@@ -1,17 +1,21 @@
 {
   "title": "Rhubarb Crunch",
-  "ingredients": [
-    "4 cups rhubarb, diced",
-    "1 cup granulated sugar",
-    "1 cup water",
-    "2 tablespoons cornstarch",
-    "1 teaspoon vanilla extract",
-    "1 cup all-purpose flour",
-    "3/4 cup rolled oats",
-    "1 cup brown sugar, packed",
-    "1 teaspoon cinnamon",
-    "1/2 cup butter, melted"
-  ],
+  "ingredients": {
+    "For the filling": [
+      "4 cups rhubarb, diced",
+      "1 cup granulated sugar",
+      "1 cup water",
+      "2 tbsp cornstarch",
+      "1 tsp vanilla extract"
+    ],
+    "For the crumb": [
+      "1 cup all-purpose flour",
+      "3/4 cup rolled oats",
+      "1 cup brown sugar, packed",
+      "1 tsp cinnamon",
+      "1/2 cup butter, melted"
+    ]
+  },
   "description": "A delightful dessert featuring tart rhubarb topped with a sweet, crumbly oat topping. Perfect for spring and summer gatherings.",
   "instructions": [
     "Preheat the oven to 350°F (175°C).",
@@ -24,8 +28,12 @@
   "servings": 8,
   "prepTime": 20,
   "cookTime": 60,
-  "image": "rhubarb.svg",
-  "icon": "hearts.svg",
+  "image": {
+    "src": "rhubarb.svg"
+  },
+  "icon": {
+    "src": "hearts.svg"
+  },
   "styles": {
     "bgColor": "bg-emerald-900",
     "textColor": "text-lime-300",
