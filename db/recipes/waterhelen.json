@@ -1,0 +1,28 @@
+{
+  "title": "Waterhelen",
+  "ingredients": [
+    "4 oz tequila or mezcal",
+    "1.5 oz triple sec",
+    "1 oz lime juice",
+    "4 oz watermelon juice",
+    "Tajín"
+  ],
+  "description": "A refreshing cocktail perfect for summer gatherings, combining the sweetness of watermelon with the kick of tequila and lime.",
+  "instructions": [
+    "In a shaker, combine the tequila, triple sec, lime juice, and watermelon juice.",
+    "Fill the shaker with ice and shake well until chilled.",
+    "Optionally, rim the glass with Tajín for a spicy kick.",
+    "Strain into a glass filled with ice.",
+    "Garnish with a slice of watermelon or a lime wedge if desired."
+  ],
+  "servings": 2,
+  "image": {
+    "src": "waterhelen.svg",
+    "className": "-translate-x-20 h-130 translate-y-1"
+  },
+  "styles": {
+    "bgColor": "bg-emerald-900",
+    "textColor": "text-lime-300",
+    "textColorHover": "text-lime-500"
+  }
+}
