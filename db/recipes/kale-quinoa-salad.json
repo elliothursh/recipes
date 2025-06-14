@@ -1,0 +1,42 @@
+{
+  "title": "Kale Quinoa Salad",
+  "ingredients": {
+    "For the salad": [
+      "2 cups kale, chopped",
+      "1/2 cup cooked quinoa",
+      "1/2 cup cherry tomatoes, halved",
+      "1/4 cup red onion, diced",
+      "1/4 cup feta cheese, crumbled"
+    ],
+    "For the dressing": [
+      "3 tbsp kewpie mayo",
+      "3 tbsp olive oil",
+      "1 tbsp lemon juice",
+      "1 tsp Dijon mustard",
+      "1 tsp dill",
+      "1 tbsp red wine vinegar",
+      "1 tbsp pepperoncini juice",
+      "Salt and pepper to taste"
+    ]
+  },
+  "description": "A refreshing and nutritious salad with quinoa, kale, cherry tomatoes, red onion, and feta cheese, dressed with a zesty lemon vinaigrette.",
+  "instructions": [
+    "Combine all the dress ingredients in a jar and shake well to emulsify.",
+    "In a large bowl, combine the kale, quinoa, cherry tomatoes, red onion, and feta cheese.",
+    "Drizzle the dressing over the salad and toss gently to combine.",
+    "Serve immediately or let it chill in the fridge for 30 minutes to allow the flavors to meld."
+  ],
+  "image": {
+    "src": "kale-quinoa-caesar.svg"
+  },
+  "icon": {
+    "src": "kewpie.svg",
+    "className": "-rotate-30 -translate-y-7/12  h-40"
+  },
+  "servings": 2,
+  "styles": {
+    "bgColor": "bg-yellow-500",
+    "textColor": "text-lime-700",
+    "textColorHover": "text-lime-900"
+  }
+}
