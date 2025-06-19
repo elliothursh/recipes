@@ -1,0 +1,35 @@
+{
+  "title": "Banana Bread",
+  "ingredients": [
+    "1/2 cup oil",
+    "1 cup sugar",
+    "2 eggs, beaten",
+    "3 bananas, mashed",
+    "2 cups sifted flour",
+    "1 teaspoon soda",
+    "1/2 teaspoon baking powder",
+    "1/2 teaspoon salt",
+    "3 tablespoons milk",
+    "1/2 teaspoon vanilla"
+  ],
+  "description": "A classic banana bread recipe that is moist, flavorful, and perfect for breakfast or a snack. This easy-to-make bread is packed with ripe bananas and can be enjoyed fresh or toasted.",
+  "instructions": [
+    "Beat oil and sugar; add eggs and bananas, beating well. Blend in flour, soda, baking powder and salt. Add milk and vanilla; mix well. Stir in nuts. Turn into greased 9x5x3-inch loaf pan. Bake at 350 degrees about 60 minutes."
+  ],
+  "image": {
+    "src": "ripe-bananas.svg",
+    "className": "-translate-x-1/8 -translate-y-1/4 w-60"
+  },
+  "icon": {
+    "src": "hearts.svg"
+  },
+  "servings": 8,
+  "prepTime": 15,
+  "cookTime": 60,
+  "ovenTemp": 350,
+  "styles": {
+    "bgColor": "bg-yellow-200",
+    "textColor": "text-yellow-700",
+    "textColorHover": "text-yellow-900"
+  }
+}
