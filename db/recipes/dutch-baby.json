@@ -1,0 +1,34 @@
+{
+  "title": "Dutch Baby",
+  "ingredients": [
+    "4 tbs unsalted butter",
+    "4 lg eggs",
+    "1/2 tsp salt",
+    "2/3(-)* cup flour",
+    "2/3(+)* cup milk",
+    "Whole nutmeg",
+    "Maple syrup"
+  ],
+  "description": "A delightful oven-baked pancake that puffs up beautifully, perfect for breakfast or brunch. Serve with maple syrup and a dusting of nutmeg for a comforting treat.",
+  "instructions": [
+    "Preheat oven to 450°. While oven is heating, blend*** together eggs and salt. Slowly add flour*, and then the milk*, continuing to blend until smooth. Put butter in a large oven-proof skillet, or stock pot, and melt in oven until lightly browned. Remove from oven, pour batter into center of pot (so it has a better chance of rising evenly), then return to oven. Bake approximately 13-14 minutes, until lightly browned on top - pancake should be puffy and uneven. Remove from oven and dust with freshly grated nutmeg. Cut into pie-shaped wedges, and serve immediately with warmed maple syrup. If it’s snowing, a sprinkling of powdered sugar may also be warranted.",
+    {
+      "Notes": [
+        "* A measure that is slightly shy on the flour but generous on the milk will yield a lighter and puffier baby.",
+        "** For 3 people: use 3 eggs, 1/2 a cup of flour & milk, and a little less butter and salt.",
+        "*** A wire whisk will also work, if you don’t have a blender."
+      ]
+    }
+  ],
+  "icon": {
+    "src": "hearts.svg"
+  },
+  "servings": 4,
+  "cookTime": 13,
+  "ovenTemp": 450,
+  "styles": {
+    "bgColor": "bg-orange-200",
+    "textColor": "text-pink-800",
+    "textColorHover": "text-pink-900"
+  }
+}
