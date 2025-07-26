@@ -23,6 +23,9 @@
   "icon": {
     "src": "hearts.svg"
   },
+  "image": {
+    "src": "dutch-baby.svg"
+  },
   "servings": 4,
   "cookTime": 13,
   "ovenTemp": 450,
